@@ -1,0 +1,32 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.2 Back to Top
+/*----------------------------------------*/
+
+#back-to-top{
+    position: fixed;
+    right: 50px;
+    bottom: 70px;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    border-radius: 50%;
+    color: var(--black-clr);
+    background: var(--white-clr);
+    transition: .3s;
+    box-shadow: 0px 8px 16px rgba(3, 4, 28, 0.3);
+    &.show{
+        opacity: 1;
+        visibility: visible;
+				bottom: 50px;
+    }
+     @media #{$xs}{
+         right: 30px;
+        }
+}

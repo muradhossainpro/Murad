@@ -1,0 +1,68 @@
+@use '../utils' as *;
+
+// /*----------------------------------------*/
+// /*  2.3 Breadcrumb
+// /*----------------------------------------*/
+
+.tf-breadcrum{
+    &-area{
+        background-size: cover;
+        background-repeat: no-repeat;
+        &::before{
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(173deg, #4230D3 -16.2%, rgba(141, 29, 0, 0.8) 101.3%);
+        }
+    }
+    &-space{
+        padding-top: 240px;
+        padding-bottom: 140px;
+    }
+     &-list{
+        & span {
+            margin: 0 2px;
+            display: inline-block;
+            color: var(--white-clr);
+            &.active{
+                & a{
+                    color: var(--theme-clr-3);
+                }
+            }
+            & a {
+                color: var(--white-clr);
+                font-size: 20px;
+            }
+            &.dvir{
+                margin: 0 2px;
+            }
+        }
+    }
+    &-shape{
+        &-1{
+            position: absolute;
+            top: 23%;
+            left: 10%;
+            animation: tfupdown 1s infinite alternate;
+        }
+        &-2{
+            position: absolute;
+            top: 23%;
+            right: 10%;
+            animation: tfupdown 1s infinite alternate;
+        }
+        &-3{
+            position: absolute;
+            bottom: 10%;
+            left: 48%;
+            animation: tfupdown 1s infinite alternate;
+            @media #{$xs}{
+                left: 42%;
+                }
+        }
+    }
+}

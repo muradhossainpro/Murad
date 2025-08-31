@@ -1,0 +1,27 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.6 Faq
+/*----------------------------------------*/
+
+.tf-faq{
+    &-bg{
+        transform: translate(-22%, 60%) rotate(-90deg);
+        &-title{
+            color: var(--theme-clr-2);
+            font-size: 200px;
+            font-weight: 700;
+            margin: 0;
+            text-transform: uppercase;
+            opacity: .2;
+        }
+    }
+}
+
+.tf-error{
+    &-image{
+           @media #{$md,$sm,$xs}{
+                margin-bottom: 40px;
+            }
+    }
+}

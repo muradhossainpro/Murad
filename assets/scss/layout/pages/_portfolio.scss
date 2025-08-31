@@ -1,0 +1,323 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.9 Portfolio
+/*----------------------------------------*/
+
+.tf-project{
+    &-tab{
+        box-shadow: 0 40px 50px 0 rgba(4, 18, 31, 0.12);
+        padding: 18px;
+        transition: .3s;
+        & button{
+            display: block;
+            font-size: 25px;
+            margin-bottom: 10px;
+            font-family: var(--font-heading);
+            padding: 10px 50px;
+            border: 1px solid var(--border-clr);
+            border-radius: var(--border-radius);
+            &.active{
+                color: var(--white-clr);
+                background-color: var(--theme-clr-2);
+            }
+             @media #{$lg}{
+                 padding: 10px 20px;
+            }
+             @media #{$md}{
+                 display: inline-block;
+                 font-size: 16px;
+                 padding: 10px 9px;
+            }
+             @media #{$sm}{
+                 display: inline-block;
+                 font-size: 17px;
+                 padding: 10px 20px;
+            }
+             @media #{$xs}{
+                 display: inline-block;
+                 font-size: 16px;
+                 padding: 10px;
+            }
+        }
+        &-2{
+            & button{
+                 @media #{$md}{
+                    font-size: 22px;
+                    padding: 10px 20px;
+                }
+            }
+        }
+    }
+    &-item{
+        padding: 50px;
+        background: var(--black-clr);
+        &-2{
+            overflow: hidden;
+            &:hover{
+                & .tf-project-content-2{
+                    opacity: 1;
+                    visibility: visible;
+                    bottom: 30px;
+                }
+            }
+        }
+    }
+    &-tag{
+        & span{
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--white-clr);
+            border: 1px solid var(--border-clr);
+            display: inline-block;
+            border-radius: 6px;
+            padding: 5px 11px;
+            transition: .3s;
+            &:hover{
+                background-color: var(--theme-clr-2);
+            }
+        }
+    }
+    &-title{
+        font-size: 30px;
+        color: var(--white-clr);
+        @media #{$xl,$sm,$xs}{
+           font-size: 20px;
+         }
+        @media #{$lg}{
+           font-size: 18px;
+           line-height: 1;
+         }
+         & :hover{
+            color: var(--theme-clr-2);
+         }
+    }
+    &-content{
+        &-wrap{
+            & p{
+                color: var(--white-clr);
+                 @media #{$xs}{
+                    font-size: 15px;
+                 }
+            }
+        }
+        &-2{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(180deg, #aa28d9 0%, #4d3bbf 100%);
+            padding: 8px 20px;
+            border-radius: 6px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.37, 0, 0.63, 1);
+             @media #{$lg}{
+                padding: 8px;
+            }
+        }
+        &-wraper{
+            @media #{$lg}{
+                margin-top: 50px;
+            }
+        }
+    }
+    &-image{
+        &-text{
+            position: absolute;
+            bottom: 0;
+            left: 30px;
+            opacity: 0;
+            visibility: hidden;
+            padding: 23px 20px 13px 35px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            transition: all 0.3s 0s ease-out;
+            & span{
+                font-weight: 500;
+                font-size: 14px;
+                color: var(--theme-clr-3);
+            }
+            &:hover{
+                & .tf-project-image-title{
+                    color: var(--theme-clr-2);
+                }
+            }
+            @media #{$xs}{
+                left: 10px;
+             }
+        }
+        &-titel{
+            font-size: 24px;
+            font-weight: 700;
+        }
+        &:hover{
+            & .tf-project-image-text{
+                opacity: 1;
+                visibility: visible;
+                bottom: 30px;
+            }
+        }
+        &-title{
+            @media #{$xs}{
+              font-size: 22px;
+            }
+        }
+    }
+    &-btn{
+        border-radius: 8px;
+        width: 50px;
+        height: 50px;
+        background: var(--white-clr);
+        display: inline-block;
+        color: #242e45;
+        text-align: center;
+        line-height: 50px;
+        font-size: 20px;
+    }
+    &-text{
+        & span{
+            color: var(--smoke-clr);
+            @media #{$xl,$sm}{
+                font-size: 14px;
+                }
+            @media #{$lg,$xs}{
+                font-size: 12px;
+                }
+        }
+    }
+    &-thumb{
+         @media #{$sm,$xs}{
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.tfportfolio{
+    &__text{
+        position: absolute;
+        bottom: 0;
+        left: 30px;
+        background: var(--white-clr);
+        padding: 10px 20px;
+        border-radius: var(--border-radius);
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+        &:hover{
+            & .tfportfolio__title{
+                color: var(--theme-clr);
+            }
+        }
+        & span{
+            background: var(--white-clr);
+            font-size: 15px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+         @media #{$md,$xs}{
+            left: 10px;
+        }
+    }
+    &__title{
+        @media #{$md,$xs}{
+            font-size: 20px;
+        }
+    }
+    &:hover{
+        & .tfportfolio{
+            &__text{
+                opacity: 1;
+                visibility: visible;
+                bottom: 30px;
+            }
+        }
+    }
+    &-filter{
+            & button{
+                font-size: 15px;
+                text-transform: uppercase;
+                font-weight: 500;
+                padding: 0 20px;
+                position: relative;
+                @media #{$sm,$xs}{
+                        padding: 0 10px;
+                    }
+                &::after{
+                    content: "|";
+                    top: -1px;
+                    right: -4px;
+                    position: absolute;
+                    border-radius: 15px;
+                    transition: 0.3s;
+                }
+                &.active{
+                    color: var(--theme-clr);
+                }
+                &:last-child{
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+        }
+    &-info{
+        background-color: var(--smoke-clr);
+        padding: 40px;
+        border-radius: var(--border-radius);
+            @media #{$lg,$xs}{
+              padding: 40px 20px;
+            }
+        &-title{
+             @media #{$md,$lg}{
+               font-size: 17px;
+            }
+        }
+        & label{
+            font-size: 15px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        & ul{
+            list-style: none;
+            & li{
+                background-color: var(--white-clr);
+                border: 1px solid #57595C;
+                padding: 17px 30px;
+                margin-bottom: 15px;
+                border-radius: 5px;
+            }
+        }
+    }
+    &-details{
+        &-list{
+            & span{
+                color: var(--white-clr);
+                background-color: var(--theme-clr-2);
+                font-size: 24px;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                border-radius: 50%;
+                flex: 0 0 auto;
+            }
+            &-title{
+                @media #{$xl}{
+                    font-size: 23px;
+                    }
+                @media #{$lg,$xs}{
+                    font-size: 18px;
+                    }
+                @media #{$md}{
+                    font-size: 22px;
+                    }
+            }
+        }
+    }
+    &__image{
+        @media #{$sm,$xs}{
+            margin-bottom: 30px;
+        }
+    }
+}

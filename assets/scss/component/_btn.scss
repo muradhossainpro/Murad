@@ -1,0 +1,97 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.4 Button
+/*----------------------------------------*/
+
+.tf-btn{
+		background: var(--theme-clr-2);
+		color: var(--black-clr);
+		font-size: 18px;
+		font-weight: 500;
+		padding: 14px 30px;
+		border-radius: 50px;
+		display: inline-block;
+		&-sec{
+			background-color: var(--black-clr);
+			color: var(--white-clr);
+			& i{
+				transform: rotate(-45deg);
+  				margin-left: 2px;
+			}
+			&:hover{
+				background-color: var(--theme-clr-2);
+				color: var(--white-clr);
+			}
+		}
+	&-black{
+		padding: 17px 39px;
+		font-weight: 500;
+		border-radius: 10px;
+		border: 2px solid transparent;
+		color: var(--white-clr);
+		background: var(--black-clr);
+		font-family: var(--font-heading);
+		&:hover{
+			color: var(--white-clr);
+			background-color: var(--theme-clr-2);
+		}
+		 @media #{$xl}{
+                padding: 17px 25px;
+                }
+		@media #{$lg,$md}{
+         padding: 15px 30px;
+        }
+	}
+	&-white{
+		color: var(--green-clr);
+		background-color: var(--white-clr);
+	}
+	&-gradient{
+				background-size: 200% auto;
+				border-radius: 10px;
+				letter-spacing: -0.02em;
+				font-family: var(--font-heading);
+				font-weight: 500;
+				color: var(--white-clr);
+				padding: 19px 36px;
+				display: inline-block;
+		&-bg{
+			background-image: linear-gradient(to right, #f1663d, #3827ac, #f1663d);
+			&:hover{
+				color: var(--white-clr);
+				background-position: right center;
+			}
+		}
+	}
+	&-project{
+		background-size: 200% auto;
+		border-radius: 10px;
+		letter-spacing: -0.02em;
+		font-family: var(--font-heading);
+		font-weight: 500;
+		color: var(--white-clr);
+		padding: 14px 29px;
+		display: inline-block;
+		&-bg{
+			background-image: linear-gradient(to right, #591804, #e1d0cb, #4a3e98);
+			&:hover{
+				color: var(--white-clr);
+				background-position: right center;
+			}
+		}
+}
+&-green{
+	background: var(--green-clr);
+	color: var(--white-clr);
+	font-size: 18px;
+	font-weight: 500;
+	padding: 14px 30px;
+	border-radius: 50px;
+	display: inline-block;
+	& i{
+		transform: rotate(-45deg);
+  		margin-left: 2px;
+	}
+}
+}

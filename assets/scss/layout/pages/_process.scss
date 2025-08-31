@@ -1,0 +1,107 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.11 Process
+/*----------------------------------------*/
+
+.tfprocess{
+	padding: 20px;
+	border-radius: var(--border-radius);
+    @include transition(.3s);
+    &__number{
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    @include transition(.3s);
+    background: var(--smoke-clr);
+    color: var(--black-clr);
+    font-weight: 600;
+    display: inline-block;
+    &::before{
+        position: absolute;
+        content: "";
+        border: 1px solid var(--border-clr);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -60%);
+        width: 64px;
+        height: 64px;
+        line-height: 64px;
+        text-align: center;
+        border-radius: 50%;
+        @include transition(.3s);
+    }
+    }
+    &:hover{
+            box-shadow: 0 20px 30px 0 rgba(3, 4, 28, 0.1);
+        & .tfprocess__number{
+          background: var(--theme-clr);
+          color: var(--white-clr);
+        }
+        & .tfprocess__number{
+            &::before{
+                transform: translate(-50%, -50%);
+                 border: 1px solid var(--theme-clr);
+            }
+        }
+      }
+      &-2{
+        background: var(--smoke-clr);
+        border: 1px solid var(--border-clr);
+        border-radius: 166px;
+        padding: 60px 35px;
+        &:hover{
+            & .tfprocess{
+                &__step{
+                & span{
+                    background-color: var(--theme-clr);
+                    }
+                } 
+                &__icon{
+                    background-color: var(--theme-clr-3);
+                }
+             }
+        }
+        @media #{$xl}{
+            padding: 50px 20px;
+              }
+        @media #{$sm}{
+            padding: 40px 10px;
+              }
+        @media #{$sm}{
+          border-radius: 20px;
+            padding: 30px 15px;
+              }
+      }
+      &__step{
+        & span{
+            padding: 8px 24px;
+            background-color: var(--theme-clr-2);
+            color: var(--white-clr);
+            border-radius: 30px;
+            transition: .3s;
+        }
+      }
+      &__icon{
+        font-size: 85px;
+        background: var(--white-clr);
+        width: 150px;
+        height: 150px;
+        display: inline-block;
+        line-height: 150px;
+        border-radius: 100%;
+        transition: .3s;
+      }
+      & p{
+         @media #{$lg}{
+          font-size: 15px;
+        }
+      }
+      &__title{
+         @media #{$lg}{
+          font-size: 24px;
+        }
+      }
+}
