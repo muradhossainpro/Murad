@@ -13,11 +13,11 @@
             display: block;
             font-size: 16px;
             font-weight: 500;
-            &:hover{
-                color: var(--theme-clr-2);
-            }
             & i{
                 display: none;
+            }
+            &:hover{
+                color: var(--theme-clr-2);
             }
         }
         
