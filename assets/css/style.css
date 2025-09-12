@@ -3583,6 +3583,9 @@ img {
 .tf-offcanvas-menu ul li > a:hover {
   color: var(--theme-clr-2);
 }
+.tf-offcanvas-menu ul li > a i {
+  display: none;
+}
 .tf-offcanvas-menu ul li:not(:last-child) > a {
   border-bottom: 1px solid rgba(1, 15, 28, 0.1);
 }

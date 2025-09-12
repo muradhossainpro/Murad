@@ -16,6 +16,9 @@
             &:hover{
                 color: var(--theme-clr-2);
             }
+            & i{
+                display: none;
+            }
         }
         
         &:not(:last-child){
