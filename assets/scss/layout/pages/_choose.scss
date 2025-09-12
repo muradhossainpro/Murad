@@ -1,0 +1,49 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.3 Choose
+/*----------------------------------------*/
+
+.tfchoose{
+    &__image{
+        & img{
+            border-radius: 300px;
+        }
+    }
+    &__margin{
+        margin-left: -200px;
+         @media #{$xxl,$xl,$lg,$md,$sm}{
+                margin-top: 50px;
+                margin-left: 0;
+            }
+         @media #{$xs}{
+                margin-left: 0;
+                margin-bottom: 30px;
+            }
+    }
+    &__list{
+        & ul{
+            & li{
+                color: var(--black-clr);
+                list-style: none;
+                font-weight: 500;
+                margin-bottom: 10px;
+                  @media #{$lg}{
+                    font-size: 15px;
+                 }
+            }
+        }
+    }
+    &__shape{
+        &-1{
+            position: absolute;
+            top: 17%;
+            left: 27%;
+            animation: tfupdown 1s infinite alternate;
+            @media #{$sm}{
+                top: 10%;
+                left: 23%;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.2 Brand
+/*----------------------------------------*/
+
+.tf-brand{
+    &-padding{
+        margin: 70px 0;
+    }
+    &-wrap{
+        border: 1px solid #ddd;
+        padding: 80px 75px;
+    }
+    &-title{
+        &-2{
+            background-color: var(--white-clr);
+            font-size: 30px;
+            margin-bottom: 0;
+            color: var(--black-clr);
+            display: inline-block;
+            transform: translateY(19px);
+            padding: 0 30px;
+        }
+    }
+}

@@ -1,0 +1,79 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.8 Newsletter
+/*----------------------------------------*/
+
+.tf-newsletter{
+    &-bg{
+        background: var(--smoke-clr);
+        padding: 80px;
+        border-radius: 20px;
+        @media #{$xs}{
+           padding: 20px;
+           padding-bottom: 80px;
+        }
+        &-2{
+            border-radius: 130px;
+        }
+    }
+    &-back{
+        font-size: 100px;
+        opacity: 0.1;
+        position: absolute;
+        left: 40px;
+        bottom: -13px;
+        line-height: 1;
+        margin: 0;
+        @media #{$xl}{
+            font-size: 88px;
+            left: 0;
+        }
+        @media #{$lg}{
+            font-size: 65px;
+            left: 0;
+        }
+        @media #{$md}{
+            font-size: 75px;
+            left: -8px;
+        }
+        @media #{$sm}{
+            font-size: 52px;
+            left: 0;
+            bottom: -8px;
+        }
+    }
+    &-input{
+        width: calc(100% - 200px);
+         @media #{$sm}{
+             width: calc(100% - 110px);
+        }
+         @media #{$xs}{
+             width: 100%;
+             margin-bottom: 20px;
+        }
+    }
+    &-btn{
+        background: var(--theme-clr);
+        position: absolute;
+        right: -40px;
+        top: -3%;
+        border-radius: 30px;
+        color: var(--white-clr);
+        padding: 16px 45px;
+        font-size: 18px;
+        display: inline-block;
+        &:hover{
+            background-color: var(--theme-clr-2);
+        }
+        @media #{$sm}{
+             right: -70px;
+             padding: 15px 25px;
+             font-size: 17px;
+        }
+        @media #{$xs}{
+             right: 10px;
+             top: inherit;
+        }
+    }
+}

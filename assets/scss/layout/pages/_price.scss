@@ -1,0 +1,130 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.10 Pricing
+/*----------------------------------------*/
+
+.tf-pricing{
+    &-wrap{
+        border: 1px solid rgba(175, 165, 165, 0.25);
+        border-radius: 25px;
+        padding: 20px;
+        transition: .3s;
+         @media #{xs,$lg}{
+            padding: 20px 10px;
+        }
+        &:hover{
+            & .tf-pricing{
+                &-btn{
+                    background-color: var(--theme-clr-3);
+                    color: var(--black-clr);
+                    }
+                    &-head{
+                        background-color: var(--white-clr);
+                    }
+                    &-title{
+                        color: var(--black-clr);
+                    }
+                    &-subtitle{
+                        color: var(--black-clr);
+                    }
+                    &-price{
+                        color: var(--black-clr);
+                        &-inner{
+                            & > cite{
+                                color: var(--black-clr);
+                            }                      
+                        }
+                    }
+                }
+        }
+    }
+    &-title{
+        color: var(--white-clr);
+        font-size: 28px;
+        transition: .3s;
+    }
+    &-subtitle{
+        color: rgba(255, 255, 255, 0.7);
+        transition: .3s;
+    }
+    &-price{
+        color: var(--white-clr);
+        font-size: 60px;
+        display: inline-block;
+        transition: .3s;
+        & cite{
+            font-size: 60px;
+        }
+        &-inner{
+            & > cite{
+                color: var(--white-clr);
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                font-family: var(--font-heading);
+                transition: .3s;
+            }
+        }
+    }
+    &-feature{
+        &-list{
+            padding: 0px 20px;
+            @media #{$md}{
+                 padding: 0px 10px;
+            }
+            @media #{$xs}{
+                 padding: 0 8px;
+            }
+            &-2{
+                @media #{$lg}{
+                 padding: 0;
+                }
+            }
+        }
+        & ul{
+            & li{
+                list-style: none;
+                color: var(--white-clr);
+                margin-bottom: 20px;
+                    @media #{$xs}{
+                        font-size: 15px;
+                     }
+                & i{
+                    width: 24px;
+                    height: 24px;
+                    background: rgba(255, 255, 255, 0.08);
+                    box-shadow: 0 1px 2px 0 rgba(6, 138, 75, 0.3);
+                    text-align: center;
+                    line-height: 24px;
+                    border-radius: 30px;
+                    font-size: 11px;
+                    color: var(--white-clr);
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+    &-para{
+        color: rgba(255, 255, 255, 0.45);
+        font-size: 14px;
+        margin-bottom: 25px;
+        display: inline-block;
+    }
+    &-head{
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: 10px;
+        padding: 35px 10px 15px 10px;
+        transition: .3s;
+    }
+    &-btn{
+        color: var(--white-clr);
+        font-family: var(--font-heading);
+        font-weight: 500;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 25px;
+        display: block;
+        text-align: center;
+        padding: 15px 30px;
+    }
+}

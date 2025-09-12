@@ -1,0 +1,256 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.1 Blog
+/*----------------------------------------*/
+
+.tfblog{
+    background-color: var(--border-clr);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: 0.3s;
+    &:hover{
+        & .tfblog__thumb{
+            & img{
+                transform: scale(1.1);
+            }
+        }
+    }
+    &__thumb{
+       & img{
+         transition: .9s;
+       }
+    }
+    &__content{
+        padding: 30px;
+            @media #{$xl}{
+                padding: 20px 15px;
+            }
+            @media #{$md}{
+                padding: 15px 10px;
+            }
+            @media #{$xs}{
+                padding: 25px 10px;
+            }
+            &-2{
+            @media #{$lg}{
+                padding: 20px 15px;
+            } 
+            }
+    }
+    &__meta{
+        & span{
+            color: var(--green-clr);
+            font-size: 14px;
+            & img{
+                border: 1px solid var(--gray-clr);
+                border-radius: 100%;
+                margin-right: 5px;
+            }
+            @media #{$lg}{
+                font-size: 13px;
+            } 
+        }
+        &-3{
+            & a{
+                font-weight: 500;
+                font-size: 12px;
+                letter-spacing: 0.02em;
+                color: var(--black-clr);
+                border-radius: 4px;
+                padding: 6px 10px;
+                line-height: 1;
+                display: inline-block;
+                border: 1px solid rgba(12, 19, 56, 0.1);
+            }
+        }
+        &-cat{
+            margin-right: 10px;
+        }
+    }
+    &__title{
+        font-size: 22px;
+        @media #{$lg,$md}{
+            font-size: 18px;
+            }
+    }
+    &__btn{
+        font-weight: 600;
+        & i{
+            background: var(--gray-clr);
+            color: var(--white-clr);
+            border-radius: 50%;
+            height: 14px;
+            width: 12px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 13px;
+            margin-left: 3px;
+            transition: 0.3s;
+        }
+    }
+    &__image{
+        & img{
+            transition: .9s;
+        }
+    }
+    &:hover{
+        background-color: var(--white-clr);
+        box-shadow: 0 10px 36px 0 rgba(28, 28, 28, 0.2);
+        & .tfblog{
+            &__title{
+                color: var(--green-clr);
+            }
+            &__btn{
+                color: var(--green-clr);
+                & i{
+                    background-color: var(--green-clr);
+                }
+            }
+            &__image{
+                & img{
+                    transform: scale(1.1) rotate(-2deg);
+                }
+            }
+        }
+    }
+    &__content{
+        &-meta{
+            width: 55px;
+            height: 170px;
+            background: #FFE4FB;
+            justify-content: center;
+            padding: 8px 0;
+            position: relative;
+            display: flex;
+            align-items: end;
+            text-align: center;
+            flex: 0 0 auto;
+            border-radius: 10px;
+            & span{
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            & i{
+                height: 45px;
+                width: 45px;
+                background: #fff;
+                border-radius: 5px;
+                line-height: 42px;
+                text-align: center;
+                margin: auto;
+                border: 1px solid #57595C;
+                border-radius: 10px;
+            }
+            & cite{
+                position: absolute;
+                width: 130px;
+                transform: rotate(-90deg);
+                left: -37px;
+                bottom: 97px;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 15px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    &__author{
+        &-avater{
+            & img{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+        }
+        &-info{
+            & h4{
+                color: var(--black-clr);
+                font-weight: 600;
+                font-size: 15px;
+                margin-bottom: 0;
+            }
+            & span{
+                color: #69696e;
+                font-weight: 400;
+                font-size: 14px;
+            }
+        }
+        &-view{
+            & span{
+                 color: #69696e;
+                 font-weight: 400;
+                 font-size: 14px;
+            }
+        }
+    }
+    &__3{
+        border: 1px solid var(--border-clr);
+        box-shadow: -15px 20px 30px 0 rgba(1, 15, 28, 0.1);
+        padding: 15px;
+        border-radius: 20px;
+        transition: .3s;
+        &:hover{
+            background-color: var(--theme-clr-3);
+        }
+    }
+    &-pagination{
+        & ul{
+            & li{
+                list-style: none;
+                display: inline-block;
+                margin-right: 5px;
+                & a{
+                    color: var(--black-clr);
+                    border: 1px solid rgba(10, 11, 15, 0.1);
+                    height: 40px;
+                    width: 40px;
+                    line-height: 39px;
+                    text-align: center;
+                    font-size: 15px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        background-color: var(--black-clr);
+                        color: var(--white-clr);
+                    }
+                }
+                & .active{
+                    background-color: var(--black-clr);
+                    color: var(--white-clr);
+                }
+            }
+        }
+    }
+    &-button{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 999;
+        left: -18px;
+        font-size: 20px;
+        background: var(--theme-clr-2);
+        height: 45px;
+        width: 45px;
+        line-height: 45px;
+        text-align: center;
+        border-radius: 30px;
+        color: var(--white-clr);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+        &-prev{
+            left: auto;
+            right: -18px;
+        }
+    }
+    &-wrapper{
+        &:hover{
+            & .tfblog-button{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}

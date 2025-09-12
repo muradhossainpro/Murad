@@ -1,0 +1,185 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  5.1 Footer Style 1
+/*----------------------------------------*/
+
+.tf-footer{
+    &-logo{
+        width: 168px;
+    }
+    &-widget{
+        & p{
+            color: var(--gray-clr-2);
+        }
+        & span{
+            color: var(--gray-clr-2);
+        }
+        &-title{
+            color: var(--white-clr);
+        }
+        & ul{
+            & li{
+                list-style: none;
+                & a{
+                    color: var(--gray-clr-2);
+                    margin-bottom: 10px;
+                    display: inline-block;
+                    font-weight: 500;
+                    &:hover{
+                        color: var(--theme-clr-3);
+                    }
+                    @media #{$xl}{
+                            margin-bottom: 7px;
+                            font-size: 16px;
+                        }
+                }
+            }
+        }
+        &-form{
+            & input{
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                border-radius: 50px;
+                padding-left: 20px;
+                padding-right: 170px;
+                &::placeholder{
+                    color: var(--gray-clr-2);
+                    }
+                &:focus{
+                    color: var(--gray-clr-2);
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                }
+            }
+            & button{
+                position: absolute;
+                border-radius: 100px;
+                font-weight: 500;
+                font-size: 18px;
+                padding: 12px 27px;
+                background: var(--theme-clr-3);
+                color: var(--black-clr);
+                right: 3px;
+                top: 2px;
+                & i{
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+        &-shape{
+            &-1{
+                position: absolute;
+                bottom: 70px;
+                left: 0;
+            }
+            &-2{
+                position: absolute;
+                bottom: 70px;
+                right: 0;
+            }
+        }
+        &-area{
+            padding-top: 80px;
+            padding-bottom: 110px;
+        }
+    }
+    &-social{
+        & a{
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white-clr);
+            border-radius: 50%;
+            display: inline-block;
+            font-size: 14px;
+            margin-right: 8px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            &:hover{
+                background-color: var(--green-clr);
+                color: var(--white-clr);
+            }
+        }
+        &-2{
+            & a{
+                margin-right: 20px;
+            }
+        }
+        &-box{
+            & a{
+                color: var(--white-clr);
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                display: inline-block;
+                text-align: center;
+                font-size: 30px;
+                text-transform: uppercase;
+                padding: 35px 30px;
+                font-family: var(--font-heading);
+                border-radius: 20px;
+                &:hover{
+                    background-color: var(--theme-clr-2);
+                }
+                 @media #{$lg}{
+                    padding: 25px 30px;
+                    font-size: 28px;
+                }
+                 @media #{$md,$sm,$xs}{
+                    display: block;
+                }
+            }
+        }
+    }
+    &-pay{
+        & img{
+            margin-right: 20px;
+            @media #{$xl}{
+                margin-right: 12px;
+            }
+            @media #{$md,$sm}{
+                margin-right: 7px;
+            }
+            @media #{$xs}{
+                margin-right: -2px;
+            }
+        }
+    }
+    &-copyright{
+        &-area{
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+         }
+         & p{
+            font-size: 14px;
+            color: var(--white-clr);
+            & a{
+                color: var(--theme-clr-3);
+                font-size: 16px;
+                font-weight: 700;
+                z-index: 99;
+                position: relative;
+            }
+         }
+         &-text{
+            & span{
+                color: var(--white-clr);
+                font-size: 14px;
+            }
+            & cite{
+                background-color: rgba(255, 255, 255, 0.2);
+                height: 15px;
+                width: 1px;
+                display: inline-block;
+                margin: 0 24px;
+                transform: translateY(3px);
+            }
+         }
+    }
+    &-contact{
+        &-item{
+            & span{
+                color: var(--gray-clr);
+                display: inline-block;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

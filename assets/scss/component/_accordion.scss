@@ -1,0 +1,65 @@
+@use '../utils' as *;
+
+// /*----------------------------------------*/
+// /*  2.1 Accordion
+// /*----------------------------------------*/
+
+.tffaq{
+    &__button{
+            color: var(--white-clr);
+            background-color: var(--theme-clr-2);
+            border-radius: 10px 10px 0 0;
+            font-weight: 700;
+            font-size: 18px;
+            padding: 19px 30px;
+            width: 100%;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            transition: .3s;
+            & span{
+                color: var(--white-clr);
+                transform: rotate(-180deg);
+            }
+            &.collapsed{
+                    color: var(--black-clr);
+                    background-color: var(--white-clr);
+                    box-shadow: 0 10px 50px 0 rgba(26, 46, 85, 0.1);
+                    & span{
+                        color: #808080;
+                        transform: rotate(0);
+                    }
+                }
+                 @media #{$xs}{
+                     font-size: 13px;
+                    }
+    }
+    &__header{
+        margin-bottom: 0;
+    }
+    &__body{
+        padding: 30px;
+    }
+    &__image{
+        &-btn{
+           position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            margin: auto;
+            transform: translateY(-50%);
+            height: 60px;
+            width: 60px;
+            line-height: 57px;
+            border-radius: 50%;
+            text-align: center;
+            display: inline-block;
+            background-color: var(--white-clr);
+            animation: animate-pulse 3s linear infinite;
+            & span{
+                display: inline-block;
+                color: var(--theme-clr);
+            }
+        }
+    }
+}

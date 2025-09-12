@@ -1,0 +1,70 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.2 Mobile Menu
+/*----------------------------------------*/
+
+.tf-offcanvas-menu ul {
+    list-style: none;
+    & li {
+        position: relative;
+        & > a{
+            padding: 8px 0;
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            &:hover{
+                color: var(--theme-clr-2);
+            }
+        }
+        
+        &:not(:last-child){
+            & > a{
+                border-bottom: 1px solid rgba(1, 15, 28, 0.1);
+            }
+        }
+        &.active{
+            & > a{
+                color: var(--theme-clr-2);
+            }
+            & > .tf-menu-close{
+                border-color: var(--theme-clr-2);
+                color: var(--white-clr);
+                background-color: var(--theme-clr-2);
+                & i{
+                    @include transform(rotate(90deg));
+                }
+            }
+        }
+        & .sub-menu {
+            display: none;
+            padding-left: 20px;
+            & li{ 
+                & a{
+                    &:hover{
+                        padding-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+.tf-menu-close {
+    position: absolute;
+    right: 0;
+    top: 7.5px;
+    border: 1px solid rgba(1, 15, 28, 0.12);
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 29px;
+    &:hover{
+        background-color: var(--theme-clr-2);
+        color: var(--white-clr);
+        border-color: var(--theme-clr-2);
+    } 
+    & i{
+        @include transition(.3s);
+    }
+}
