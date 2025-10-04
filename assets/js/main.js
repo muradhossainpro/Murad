@@ -32,9 +32,9 @@
     windowOn.on('scroll', function () {
       var scroll = windowOn.scrollTop();
       if (scroll < 100) {
-        $("#tf-header-sticky").removeClass("header-sticky");
+        $("#tf-header-sticky").removeClass("tf-header-sticky");
       } else {
-        $("#tf-header-sticky").addClass("header-sticky");
+        $("#tf-header-sticky").addClass("tf-header-sticky");
       }
     });
 

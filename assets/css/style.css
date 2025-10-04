@@ -2658,6 +2658,21 @@ img {
   animation: tfSwing 2s linear infinite alternate;
 }
 
+/* tf FadeInDown */
+@keyframes tffadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.tffadeInDown {
+  animation: tffadeInDown 1s ease-out forwards;
+}
+
 /* tf FadeInUp */
 .tffadeInUp {
   opacity: 0; /* Start invisible */
@@ -3461,8 +3476,16 @@ img {
     margin: 10px;
   }
 }
+.tf-header-transparent {
+  background-color: var(--white-clr);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+}
 
-#tf-header-sticky {
+.tf-header-sticky {
   position: fixed;
   top: 0;
   left: 0;
@@ -3472,7 +3495,7 @@ img {
   animation: 0.7s ease-in-out 0s normal none 1 running tffadeInDown;
   box-shadow: 0px 20px 30px rgba(167, 167, 167, 0.1);
 }
-#tf-header-sticky.tf-sticky-white {
+.tf-header-sticky.tf-sticky-white {
   background-color: var(--white-clr);
 }
 
@@ -4918,6 +4941,9 @@ img {
     font-size: 22px;
   }
 }
+.tf-project-image-2 img {
+  width: 100%;
+}
 .tf-project-btn {
   border-radius: 8px;
   width: 50px;
@@ -5081,6 +5107,9 @@ img {
 }
 .tfservices__image img {
   transition: 0.8s;
+}
+.tfservices__image-2 img {
+  width: 100%;
 }
 .tfservices__content p {
   font-size: 14px;

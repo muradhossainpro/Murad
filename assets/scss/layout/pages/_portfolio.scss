@@ -163,6 +163,11 @@
               font-size: 22px;
             }
         }
+        &-2{
+            & img{
+                width: 100%;
+            }
+        }
     }
     &-btn{
         border-radius: 8px;
